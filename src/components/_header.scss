@@ -1,0 +1,60 @@
+
+/*******************/
+%gridareaheader{
+    display: inline-grid;
+    grid-template-areas:"area1 area2"
+                        "area3 area2"
+                        "area4 area2"
+                        ;
+    
+    grid-template-rows: 10% 70% 20%;
+    grid-template-columns: 50% 50%;
+   
+    
+    @for $i from 1 through 4{
+    $namearea: area+$i;
+    .area#{$i}{
+    grid-area: $namearea ;
+     }
+    }
+
+}
+
+header{
+    @extend %gridareaheader;
+    
+    
+}
+
+header h1{
+    grid-area: area1;
+    
+    
+    @extend %centrargrid;
+}
+
+header div{
+    grid-area: area3;
+    @extend %centrargrid;
+    
+}
+
+
+
+header figure{
+    grid-area: area2;
+    @extend %centrargrid;
+    img{
+        width: 80%;
+    }
+}
+header a{
+    grid-area: area4;
+    
+    
+}
+
+
+
+
+

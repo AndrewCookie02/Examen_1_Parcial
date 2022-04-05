@@ -1,0 +1,104 @@
+/***centrar los items en grids****/
+%centrargrid{
+    justify-self: center;
+    align-self: center;
+}
+
+/**mixin de margin**/
+@mixin marginlados($izq, $derec){
+    margin-left: $izq;
+    margin-right: $derec;
+}
+
+@mixin marginvertical($arr, $abj){
+    margin-top: $arr;
+    margin-bottom: $abj;
+}
+
+/**mixin de padding**/
+@mixin paddingverti ($padtop, $padbott) {
+    padding-top: $padtop;
+    padding-bottom: $padbott;
+}
+
+@mixin paddinlados ($padlef, $padrig) {
+    padding-left: $padlef;
+    padding-right: $padrig;
+}
+
+
+%gridareas{
+    display: grid;
+    grid-template-areas: "area1 area1"
+                        "area2 area3"
+                        "area4 area5";
+   
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 18% 25% 60%;
+    gap: 5px;
+    width: 95%;
+    
+    //estructura de control para repartir las areas
+
+    @for $i from 1 through 5{
+        $namearea: area+$i;
+        .area#{$i}{
+            grid-area: $namearea;
+        }
+    }
+}
+
+
+
+.body{
+    @extend %gridareas;
+    box-sizing: border-box;
+    @include marginlados(0%, 10%);
+    @include marginvertical(5%,0% );
+
+
+    header{
+        grid-area: area1;
+       @include marginlados(2%, 10%);
+       width: 98%;
+        @include paddingverti(2%, 0% );
+    }
+    
+
+    aside{
+        grid-area: area2;
+      @include marginlados(4%, 0%);
+      
+
+        h1,div{
+            @include paddinlados(9%,0% )
+        }
+    }
+    
+    article{
+        grid-area: area3;
+        width: 100%;
+       
+        h1, section{
+            @include paddinlados(9%,0% )
+        }
+    }
+    
+
+    section{
+        grid-area: area4;
+        width: 100%; 
+        @include marginlados(4%, 10%);
+    }
+    
+    footer{
+        grid-area: area5;
+       @include marginlados(0%, 10%);
+       width: 100%;
+    }
+}
+
+
+
+
+

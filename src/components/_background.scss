@@ -1,0 +1,13 @@
+
+@mixin colorfondo($colorbg){
+    background-color: $colorbg;
+}
+
+
+.bg{
+    @each $name , $colorbg in $colorbackg{
+        &-#{$name}{
+            @include colorfondo($colorbg);
+        }
+    }
+}

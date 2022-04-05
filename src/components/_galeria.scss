@@ -1,0 +1,64 @@
+
+%grigaleria{
+    display: grid;
+    grid-template-areas: "area1 area2"
+                        "area3 area4"
+                        "area5 area6"
+                        "area7 area8";
+    
+   
+
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20% 20% 30% 40%;
+}
+
+.GridGaleria{
+    @extend %grigaleria;
+    width: 95%;
+    @include marginlados(0%, 10%);
+}
+
+.GridGaleria img{
+    width: 100%;
+    
+    border-radius: 30px;
+    &:hover{
+        transition: ease-in-out 1s;
+        transform: scale();
+        filter: brightness(50%)
+    }
+    
+}
+
+
+.img1{
+    grid-area: area1;
+}
+
+.img2{
+    grid-area: area2;
+}
+
+.img3{
+    grid-area: area3;
+}
+
+.img4{
+    grid-area: area4;
+}
+
+.img5{
+    grid-area: area5;
+}
+
+.img6{
+    grid-area: area6;
+}
+
+.img7{
+    grid-area: area7;
+}
+
+.img8{
+    grid-area: area8;
+}

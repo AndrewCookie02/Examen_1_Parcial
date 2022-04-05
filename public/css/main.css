@@ -1,1 +1,310 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+/*******/
+/***centrar los items en grids****/
+@import url("https://fonts.googleapis.com/css2?family=Finger+Paint&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap");
+header h1, header div, header figure {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+/**mixin de margin**/
+/**mixin de padding**/
+.body {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "area1 area1" "area2 area3" "area4 area5";
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 18% 25% 60%;
+      grid-template-rows: 18% 25% 60%;
+  gap: 5px;
+  width: 95%;
+}
+
+.body .area1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: area1;
+}
+
+.body .area2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: area2;
+}
+
+.body .area3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: area3;
+}
+
+.body .area4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: area4;
+}
+
+.body .area5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: area5;
+}
+
+.body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-left: 0%;
+  margin-right: 10%;
+  margin-top: 5%;
+  margin-bottom: 0%;
+}
+
+.body header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: area1;
+  margin-left: 2%;
+  margin-right: 10%;
+  width: 98%;
+  padding-top: 2%;
+  padding-bottom: 0%;
+}
+
+.body aside {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: area2;
+  margin-left: 4%;
+  margin-right: 0%;
+}
+
+.body aside h1, .body aside div {
+  padding-left: 9%;
+  padding-right: 0%;
+}
+
+.body article {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: area3;
+  width: 100%;
+}
+
+.body article h1, .body article section {
+  padding-left: 9%;
+  padding-right: 0%;
+}
+
+.body section {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: area4;
+  width: 100%;
+  margin-left: 4%;
+  margin-right: 10%;
+}
+
+.body footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: area5;
+  margin-left: 0%;
+  margin-right: 10%;
+  width: 100%;
+}
+
+/*******************/
+header {
+  display: -ms-inline-grid;
+  display: inline-grid;
+      grid-template-areas: "area1 area2" "area3 area2" "area4 area2";
+  -ms-grid-rows: 10% 70% 20%;
+      grid-template-rows: 10% 70% 20%;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+header .area1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: area1;
+}
+
+header .area2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: area2;
+}
+
+header .area3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: area3;
+}
+
+header .area4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: area4;
+}
+
+header h1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: area1;
+}
+
+header div {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: area3;
+}
+
+header figure {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: area2;
+}
+
+header figure img {
+  width: 80%;
+}
+
+header a {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: area4;
+}
+
+.GridGaleria {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "area1 area2" "area3 area4" "area5 area6" "area7 area8";
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: 20% 20% 30% 40%;
+      grid-template-rows: 20% 20% 30% 40%;
+}
+
+.GridGaleria {
+  width: 95%;
+  margin-left: 0%;
+  margin-right: 10%;
+}
+
+.GridGaleria img {
+  width: 100%;
+  border-radius: 30px;
+}
+
+.GridGaleria img:hover {
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
+  -webkit-transform: scale();
+          transform: scale();
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
+}
+
+.img1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: area1;
+}
+
+.img2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: area2;
+}
+
+.img3 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: area3;
+}
+
+.img4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: area4;
+}
+
+.img5 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: area5;
+}
+
+.img6 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: area6;
+}
+
+.img7 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: area7;
+}
+
+.img8 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: area8;
+}
+
+.texto-header {
+  font-size: 40px;
+  font-family: "Finger Paint", cursive;
+  color: blue;
+}
+
+.texto-subs {
+  font-size: 30px;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #14a13f;
+}
+
+.texto-subs2 {
+  font-size: 20px;
+  font-family: "Roboto Mono", monospace;
+  color: #801300;
+}
+
+.texto-parrf {
+  font-size: 15px;
+  font-family: "Nunito Sans", sans-serif;
+  color: #770677;
+}
+
+.bg-back1 {
+  background-color: antiquewhite;
+}
+
+.bg-back2 {
+  background-color: #bdc9ff;
+}
+
+.bg-back3 {
+  background-color: #f1c6f1;
+}
+
+.bg-back4 {
+  background-color: #fcfca0;
+}
+
+.bg-back5 {
+  background-color: #fca6a6;
+}
+
+* {
+  text-decoration: none;
+}
+/*# sourceMappingURL=main.css.map */

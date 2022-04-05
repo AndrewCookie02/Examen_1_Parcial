@@ -1,0 +1,33 @@
+@mixin setText ($size, $fontfam, $colortext){
+    font-size: $size;
+    font-family: $fontfam;
+    color: $colortext;
+}
+
+
+//ejemplo con mapa para definir los estilos de texto
+$textos: ('header': 40px $fontheader map-get($colors,'header'),
+'subs': 30px $fontsubs map-get($colors,'subs'), 
+'subs2': 20px $fontsubs2 map-get($colors,'subs2'), 
+'parrf': 15px $fontparraf map-get($colors,'parrf') );
+
+
+
+
+.texto{
+//llamo la lista con las configs de textos
+    $ListaConfig: map-keys($map: $textos);
+
+    //elementos en la lista que llamé
+    @each $elemento in $ListaConfig {
+        $valores: map-get($map: $textos, $key: $elemento);
+
+        $size: nth($list: $valores, $n: 1);
+        $fontfam: nth($list: $valores, $n:2);
+        $colortext: nth($list: $valores , $n: 3);
+
+        &-#{$elemento}{
+            @include setText ($size, $fontfam, $colortext);
+        }
+    }
+}
