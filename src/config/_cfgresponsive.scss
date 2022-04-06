@@ -1,0 +1,95 @@
+
+@media all and (max-width:564px){
+
+    %gridresponsive{
+        display: grid;
+        grid-template-areas: "area1"
+                            "area2"
+                            "area3"
+                            "area4"
+                            "area5";
+       
+        grid-template-columns: 95%;
+        grid-template-rows: 18% 17% 18% 22% 26% ;
+        width: 99%;
+        
+    }
+    .body{
+        @extend %gridresponsive;
+        box-sizing: border-box;
+
+        header{
+            grid-area: area1;
+            
+        }
+
+        aside{
+            grid-area: area2;
+            @include marginlados(10px,0px);
+           
+        }
+
+        article{
+            grid-area: area3;
+            @include marginlados(10px,10px);
+            
+        }
+
+        section{
+            grid-area: area4;
+            @include marginlados(10px,0px);
+            img{
+                border-radius: 0px;
+                width: 100%;
+            }
+            
+        }
+
+        footer{
+            grid-area: area5;
+            @include marginlados(10px,0px);
+            div:nth-child(1){
+                @include marginlados(25%,0px);
+            }
+        }
+    }
+}
+
+@media all and (max-width:564px){
+
+    %gridresponsive2{
+        display: grid;
+        grid-template-areas: "area1"
+                            "area2"
+                            "area3"
+                            "area4";
+       
+        grid-template-columns: 97%;
+        grid-template-rows: 15% 25% 45% 18%;
+        width: 100%;
+    }
+    header{
+        @extend %gridresponsive2;
+        box-sizing: border-box;
+        width: 100%;
+
+        h1{
+            grid-area: area1
+
+        }
+
+        div{
+            grid-area: area3;
+        }
+
+        figure{
+            grid-area: area2;
+        }
+
+        a{
+            grid-area: area4;
+        }
+
+    }
+
+}

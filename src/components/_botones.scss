@@ -1,0 +1,24 @@
+header a{
+    background-color: rgb(203, 148, 255);
+    @include paddinlados (1%, 1%) ;
+    border-radius: 10px;
+    box-shadow: 3px 3px 9px 0px rgb(180, 73, 91);
+    transition: ease-in-out 1s;
+    &:hover{
+        background-color: rgb(142, 42, 236);
+        color: white;
+        transform: scaleX(1.2);
+    }
+}
+
+footer {
+    i{
+    font-size: 20px;
+    color:rgb(156, 34, 34);
+    transition: ease-in-out 1s;
+    &:hover{
+        transform: scale(1.5);
+        color:rgb(108, 174, 204);
+        }
+    }
+}

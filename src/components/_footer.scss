@@ -1,0 +1,51 @@
+footer {
+    ul{
+    display: flex;
+    flex-direction: column;
+        li{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+            i{
+                @include marginlados(0%,2%);
+            }
+        }
+    }
+
+
+    h2{
+        border: 1px solid slateblue ;
+        box-shadow: 0px -1px 9px 0px #494bb4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include marginlados(25%,25%);
+    }
+
+    div{
+        @include marginlados(7%,0%);
+        
+       }
+
+       form{
+           display: flex ;
+           flex-direction: column;
+            align-items: center;
+       }
+
+       div:nth-child(2){
+        @include marginvertical(10px,0px);
+       }
+
+       input:focus, textarea:focus{
+        background-color: rgb(147, 190, 247);
+        color: darkblue;
+       }
+
+       button{
+           @include marginvertical(10px,0px);
+        background-color: rgb(198, 163, 231);
+        border-color: purple;
+        font-size: 15px;
+       }
+}

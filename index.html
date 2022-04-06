@@ -119,23 +119,65 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     
     
         <footer class="bg-back5">
-                <div>
-                    <h2 class="texto-subs">Informaci&oacute;n de contacto</h2>
-                    <p class="texto-parrf"><i class="fa-brands fa-facebook-square"></i></i>Facebook</p>
+            <h2 class="texto-subs">Informaci&oacute;n de contacto</h2>
+
+            <ul>
+                <li>
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <p class="texto-parrf">Facebook</p>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-phone"></i>
+                    <p class="texto-parrf">Tel: 2522-4690</p>
+                </li>
+
+                <li>
+                    <i class="fa-solid fa-mobile-button"></i>
+                    <p class="texto-parrf">Cel: 7825-7589</p>
+                </li>
+                <li>
+                    <i class="fa-solid fa-envelope"></i>
+                    <p class="texto-parrf">arte_visual@hotmail.com</p>
+                </li>
+            </ul>
+    
+            <h2 class="texto-subs"><i class="fa-solid fa-users"></i>¿Qui&eacute;nes somos?</h2>
+            <div>
+                <p class="texto-parrf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aspernatur quos tempora eum cum odio, dolor maxime ad eos animi corrupti molestiae sapiente blanditiis ab! Incidunt id velit sunt iure!</p>
+            </div>
+
+            <section id="Formulario">
+                <form action="" method="get">
+                    <div>
+                        <label for="txtNombre"></label>
+                        <input size="30" type="text" name="txtNombre" id="txtNombre" placeholder="Ingrese su nombre">
                     
-                    <p class="texto-parrf"><i class="fa-solid fa-phone"></i>Tel: 2522-4690</p>
-                    <p class="texto-parrf"><i class="fa-solid fa-mobile-button"></i>Cel: 7825-7589</p>
-                    <p class="texto-parrf"><i class="fa-solid fa-envelope"></i>arte_visual@hotmail.com</p>
-                </div>
-    
-                <div>
-                    <h2 class="texto-subs"><i class="fa-solid fa-users"></i>¿Qui&eacute;nes somos?</h2>
-                    <p class="texto-parrf">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum aspernatur quos tempora eum cum odio, dolor maxime ad eos animi corrupti molestiae sapiente blanditiis ab! Incidunt id velit sunt iure!</p>
-                </div>
-        </footer>
+                    
+                        <label for="txtCorreo"></label>
+                        <input type="email" name="txtCorreo" id="txtCorreo" size="30" placeholder="correo@dominio.com">
+                    </div>
 
-    </section>
-    
+                    <div>
+                        <label for="txtcomentario">
+                        </label>
+                        <textarea name="txtcomentario" id="txtcomentario" cols="47" rows="8" maxlength="200" placeholder="Ingrese su comentario"></textarea>
+                    </div>
 
+                    <div>
+                        <button type="submit" id="btnAceptar">Aceptar</button>
+                        <button type="reset" id="btnCancelar">Cancelar</button>
+                        <input type="hidden" id="nForm">
+                    </div>
+                    
+                </form>
+    
+            </section> <!--Final formulario-->
+
+        </footer> <!--Final del footer-->
+
+        
+    </section> <!--Final del cuerpo-->
+    
 </body>
 </html>

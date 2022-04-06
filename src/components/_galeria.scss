@@ -15,17 +15,26 @@
 .GridGaleria{
     @extend %grigaleria;
     width: 95%;
-    @include marginlados(0%, 10%);
+    @include marginlados(-1%, -1%);
 }
+
+#Galeria{
+    h1{
+        display: flex;
+        justify-content: center;
+    }
+} 
+
 
 .GridGaleria img{
     width: 100%;
-    
+    transition: ease-in-out 1s;
     border-radius: 30px;
+    box-shadow: 3px 3px 9px 0px rgb(73, 75, 180);
     &:hover{
-        transition: ease-in-out 1s;
-        transform: scale();
-        filter: brightness(50%)
+        
+        transform: scale(1.1);
+        filter: brightness(70%)
     }
     
 }

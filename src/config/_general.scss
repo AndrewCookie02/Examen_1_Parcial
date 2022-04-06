@@ -33,10 +33,10 @@
                         "area2 area3"
                         "area4 area5";
    
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 18% 25% 60%;
-    gap: 5px;
-    width: 95%;
+    grid-template-columns: 52% 55%;
+    grid-template-rows: 18% 29% 49%;
+    
+    width: 90%;
     
     //estructura de control para repartir las areas
 
@@ -48,13 +48,11 @@
     }
 }
 
-
-
 .body{
     @extend %gridareas;
     box-sizing: border-box;
-    @include marginlados(0%, 10%);
-    @include marginvertical(5%,0% );
+    
+    @include marginvertical(2%,0% );
 
 
     header{
@@ -69,18 +67,24 @@
         grid-area: area2;
       @include marginlados(4%, 0%);
       
-
-        h1,div{
-            @include paddinlados(9%,0% )
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+        div{
+            @include marginlados(7%,0%);
         }
     }
     
     article{
         grid-area: area3;
         width: 100%;
-       
-        h1, section{
-            @include paddinlados(9%,0% )
+        h1{
+            display: flex;
+            justify-content: center;
+        }
+        section{
+            @include paddinlados(3%,0% )
         }
     }
     
@@ -88,13 +92,12 @@
     section{
         grid-area: area4;
         width: 100%; 
-        @include marginlados(4%, 10%);
+        @include marginlados(4%, 100%);
     }
     
     footer{
         grid-area: area5;
-       @include marginlados(0%, 10%);
-       width: 100%;
+       width: 100%;  
     }
 }
 

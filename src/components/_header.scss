@@ -29,13 +29,13 @@ header{
 header h1{
     grid-area: area1;
     
-    
     @extend %centrargrid;
 }
 
 header div{
     grid-area: area3;
     @extend %centrargrid;
+    @include marginlados(5%,0%);
     
 }
 
@@ -46,10 +46,13 @@ header figure{
     @extend %centrargrid;
     img{
         width: 80%;
+        border-radius: 20px;
+        box-shadow: 3px 3px 9px 0px rgb(73, 75, 180);
     }
 }
 header a{
     grid-area: area4;
+    @extend %centrargrid;
     
     
 }

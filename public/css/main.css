@@ -4,7 +4,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200&display=swap");
-header h1, header div, header figure {
+header h1, header div, header figure, header a {
   -ms-grid-column-align: center;
       justify-self: center;
   -ms-flex-item-align: center;
@@ -18,12 +18,11 @@ header h1, header div, header figure {
   display: -ms-grid;
   display: grid;
       grid-template-areas: "area1 area1" "area2 area3" "area4 area5";
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-  -ms-grid-rows: 18% 25% 60%;
-      grid-template-rows: 18% 25% 60%;
-  gap: 5px;
-  width: 95%;
+  -ms-grid-columns: 52% 55%;
+      grid-template-columns: 52% 55%;
+  -ms-grid-rows: 18% 29% 49%;
+      grid-template-rows: 18% 29% 49%;
+  width: 90%;
 }
 
 .body .area1 {
@@ -59,9 +58,7 @@ header h1, header div, header figure {
 .body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin-left: 0%;
-  margin-right: 10%;
-  margin-top: 5%;
+  margin-top: 2%;
   margin-bottom: 0%;
 }
 
@@ -84,9 +81,18 @@ header h1, header div, header figure {
   margin-right: 0%;
 }
 
-.body aside h1, .body aside div {
-  padding-left: 9%;
-  padding-right: 0%;
+.body aside h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.body aside div {
+  margin-left: 7%;
+  margin-right: 0%;
 }
 
 .body article {
@@ -96,8 +102,17 @@ header h1, header div, header figure {
   width: 100%;
 }
 
-.body article h1, .body article section {
-  padding-left: 9%;
+.body article h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.body article section {
+  padding-left: 3%;
   padding-right: 0%;
 }
 
@@ -107,15 +122,13 @@ header h1, header div, header figure {
   grid-area: area4;
   width: 100%;
   margin-left: 4%;
-  margin-right: 10%;
+  margin-right: 100%;
 }
 
 .body footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: area5;
-  margin-left: 0%;
-  margin-right: 10%;
   width: 100%;
 }
 
@@ -164,6 +177,8 @@ header div {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: area3;
+  margin-left: 5%;
+  margin-right: 0%;
 }
 
 header figure {
@@ -174,6 +189,9 @@ header figure {
 
 header figure img {
   width: 80%;
+  border-radius: 20px;
+  -webkit-box-shadow: 3px 3px 9px 0px #494bb4;
+          box-shadow: 3px 3px 9px 0px #494bb4;
 }
 
 header a {
@@ -194,22 +212,33 @@ header a {
 
 .GridGaleria {
   width: 95%;
-  margin-left: 0%;
-  margin-right: 10%;
+  margin-left: -1%;
+  margin-right: -1%;
+}
+
+#Galeria h1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .GridGaleria img {
   width: 100%;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
   border-radius: 30px;
+  -webkit-box-shadow: 3px 3px 9px 0px #494bb4;
+          box-shadow: 3px 3px 9px 0px #494bb4;
 }
 
 .GridGaleria img:hover {
-  -webkit-transition: ease-in-out 1s;
-  transition: ease-in-out 1s;
-  -webkit-transform: scale();
-          transform: scale();
-  -webkit-filter: brightness(50%);
-          filter: brightness(50%);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: brightness(70%);
+          filter: brightness(70%);
 }
 
 .img1 {
@@ -269,7 +298,7 @@ header a {
 .texto-subs {
   font-size: 30px;
   font-family: "Roboto Condensed", sans-serif;
-  color: #14a13f;
+  color: #0b757c;
 }
 
 .texto-subs2 {
@@ -279,7 +308,7 @@ header a {
 }
 
 .texto-parrf {
-  font-size: 15px;
+  font-size: 18px;
   font-family: "Nunito Sans", sans-serif;
   color: #770677;
 }
@@ -304,7 +333,216 @@ header a {
   background-color: #fca6a6;
 }
 
+header a {
+  background-color: #cb94ff;
+  padding-left: 1%;
+  padding-right: 1%;
+  border-radius: 10px;
+  -webkit-box-shadow: 3px 3px 9px 0px #b4495b;
+          box-shadow: 3px 3px 9px 0px #b4495b;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
+}
+
+header a:hover {
+  background-color: #8e2aec;
+  color: white;
+  -webkit-transform: scaleX(1.2);
+          transform: scaleX(1.2);
+}
+
+footer i {
+  font-size: 20px;
+  color: #9c2222;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
+}
+
+footer i:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  color: #6caecc;
+}
+
+footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer ul li i {
+  margin-left: 0%;
+  margin-right: 2%;
+}
+
+footer h2 {
+  border: 1px solid slateblue;
+  -webkit-box-shadow: 0px -1px 9px 0px #494bb4;
+          box-shadow: 0px -1px 9px 0px #494bb4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+footer div {
+  margin-left: 7%;
+  margin-right: 0%;
+}
+
+footer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer div:nth-child(2) {
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+footer input:focus, footer textarea:focus {
+  background-color: #93bef7;
+  color: darkblue;
+}
+
+footer button {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  background-color: #c6a3e7;
+  border-color: purple;
+  font-size: 15px;
+}
+
+@media all and (max-width: 564px) {
+  .body {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "area1" "area2" "area3" "area4" "area5";
+    -ms-grid-columns: 95%;
+        grid-template-columns: 95%;
+    -ms-grid-rows: 18% 17% 18% 22% 26%;
+        grid-template-rows: 18% 17% 18% 22% 26%;
+    width: 99%;
+  }
+  .body {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .body header {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: area1;
+  }
+  .body aside {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: area2;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+  .body article {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: area3;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .body section {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: area4;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+  .body section img {
+    border-radius: 0px;
+    width: 100%;
+  }
+  .body footer {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: area5;
+    margin-left: 10px;
+    margin-right: 0px;
+  }
+  .body footer div:nth-child(1) {
+    margin-left: 25%;
+    margin-right: 0px;
+  }
+}
+
+@media all and (max-width: 564px) {
+  header {
+    display: -ms-grid;
+    display: grid;
+        grid-template-areas: "area1" "area2" "area3" "area4";
+    -ms-grid-columns: 97%;
+        grid-template-columns: 97%;
+    -ms-grid-rows: 15% 25% 45% 18%;
+        grid-template-rows: 15% 25% 45% 18%;
+    width: 100%;
+  }
+  header {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+  }
+  header h1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: area1;
+  }
+  header div {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: area3;
+  }
+  header figure {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: area2;
+  }
+  header a {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: area4;
+  }
+}
+
 * {
   text-decoration: none;
+  list-style: none;
 }
 /*# sourceMappingURL=main.css.map */
